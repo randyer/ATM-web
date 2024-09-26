@@ -493,7 +493,7 @@ function App() {
         {/* About */}
         <div
           id="About"
-          className="flex flex-col justify-center items-center p-4 bg-purple text-black"
+          className="flex flex-col justify-center items-center p-4 bg-purple text-black w-full"
         >
           <h1 className=" text-2xl md:text-4xl p-4">About Me</h1>
           <img
@@ -501,7 +501,7 @@ function App() {
             src="/profile_pic.jpg"
             alt="profile"
           />
-          <p className="text-lg md:text-2xl p-4">
+          <p className="text-lg md:text-2xl p-4 max-w-6xl">
             I've been a practicing Massage Therapist since 2009, treating
             clients with Deep Tissue and Swedish Massage for the first few
             years. However, I have transitioned to practicing Craniosacral
@@ -518,7 +518,7 @@ function App() {
             be happier to offer both relaxation and pain management through
             Craniosacral Therapy.{" "}
           </p>
-          <p className="text-lg md:text-2xl p-4">
+          <p className="text-lg md:text-2xl p-4 max-w-6xl">
             The human body is miraculous, and we're only beginning to understand
             it's capabilities. My approach is a combination of both eastern and
             western methods with a sound foundation in anatomy and science. If
