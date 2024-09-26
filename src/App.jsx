@@ -36,6 +36,17 @@ function App() {
   }, [isMenuOpen]);
   return (
     <div className="text-center">
+      {/* Header */}
+      <div className="relative flex justify-center items-center header w-screen h-screen text-white bg-hero bg-cover bg-center max-w-[100%] mb-10 bg-fixed">
+        <div className="flex flex-col justify-center items-center absolute inset-0 bg-black bg-opacity-65">
+          <h1 className="italic text-4xl md:text-6xl md:p-4">
+            Craniosacral Therapy
+          </h1>
+          <h2 className="italic text-xl p-2 md:text-4xl md:p-4">
+            Healing through gentle touch
+          </h2>
+        </div>
+      </div>
       <nav className="absolute top-0 flex italic justify-between items-center w-full p-4 bg-purple z-50">
         <h1 className="text-lg md:text-xl text-white">
           Alton Therapeutic Massage
@@ -156,18 +167,6 @@ function App() {
           </li>
         </ul>
       </nav>
-
-      {/* Header */}
-      <div className="relative flex justify-center items-center header w-screen h-screen text-white bg-hero bg-cover bg-center max-w-[100%] mb-10">
-        <div className="flex flex-col justify-center items-center absolute inset-0 bg-black bg-opacity-65">
-          <h1 className=" italic text-4xl md:text-6xl md:p-4 ">
-            Craniosacral Therapy
-          </h1>
-          <h2 className="italic text-xl p-2 md:text-4xl md:p-4 ">
-            Healing through gentle touch
-          </h2>
-        </div>
-      </div>
 
       <div
         id="Treatments"
