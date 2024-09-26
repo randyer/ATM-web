@@ -483,7 +483,7 @@ function App() {
         >
           <h1 className=" text-2xl md:text-4xl p-4">About Me</h1>
           <img
-            className="w-44 rounded-full p-4"
+            className="w-44 md:w-56 rounded-full p-4"
             src="/profile_pic.jpg"
             alt="profile"
           />
