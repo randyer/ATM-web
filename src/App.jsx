@@ -2,10 +2,13 @@ import "./App.css";
 
 function App() {
   return (
-    <>
+    <div className="text-center">
       <nav className="absolute top-0 flex italic justify-between items-center w-full p-4 bg-purple z-50">
-        <h1 className="text-white">Alton Therapeutic Massage</h1>
-        <ul className="justify-between items-center gap-x-4 text-white hidden md:flex">
+        <h1 className=" text-lg md:text-xl text-white">
+          Alton Therapeutic Massage
+        </h1>
+
+        <ul className=" text-xl justify-between items-center gap-x-4 text-white hidden md:flex">
           <li>
             <a href="#Treatments" className="hover:underline">
               Treatments
@@ -37,10 +40,10 @@ function App() {
       {/* Header */}
       <div className="relative flex justify-center items-center header w-screen h-screen text-white bg-hero bg-cover bg-center mb-10">
         <div className="flex flex-col justify-center items-center absolute inset-0 bg-black bg-opacity-65 p-6">
-          <h1 className=" text-4xl md:text-6xl md:p-4 text-center">
+          <h1 className=" italic text-4xl md:text-6xl md:p-4 ">
             Craniosacral Therapy
           </h1>
-          <h2 className=" text-xl p-2 md:text-4xl md:p-4 text-center">
+          <h2 className="italic text-xl p-2 md:text-4xl md:p-4 ">
             Healing through gentle touch
           </h2>
         </div>
@@ -50,13 +53,13 @@ function App() {
         id="Treatments"
         className="flex flex-col bg-black text-white justify-center items-center"
       >
-        <h2 className="text-xl md:text-5xl p-4 self-center text-center">
+        <h2 className="text-2xl md:text-5xl p-4 self-center ">
           Available Craniosacral Treatments
         </h2>
         <div className="flex flex-col md:flex-row md:gap-4 text-xl md:text-2xl text-purple justify-center">
-          <h3 className="md:p-4">30 minutes: $66.25</h3>
-          <h3 className="md:p-4">60 minutes: $127.50</h3>
-          <h3 className="md:p-4">90 minutes: $188.75</h3>
+          <h3 className="md:p-2">30 minutes: $66.25</h3>
+          <h3 className="md:p-2">60 minutes: $127.50</h3>
+          <h3 className="md:p-2">90 minutes: $188.75</h3>
         </div>
 
         <a href="https://craniosacralmassagetherapy.com/NewPatientForm.html">
@@ -69,10 +72,10 @@ function App() {
         <div className=" relative flex flex-wrap mt-8 p-4">
           {/* Each flex-row will contain one header and one paragraph */}
           <div className="flex flex-col gap-2 w-full md:w-1/2 items-center md:p-4">
-            <h2 className="font-bold text-lg md:text-3xl text-center">
+            <h2 className="font-bold text-xl md:text-3xl ">
               Soft Tissue Release
             </h2>
-            <p className="p-4 md:text-2xl">
+            <p className="p-4 text-lg md:text-2xl">
               Pain, tight muscles, or headaches are common complaints treated.
               Flexibility, spine movement, increased circulation, pain relief,
               and muscle relaxation are some effects of this treatment. A more
@@ -81,10 +84,10 @@ function App() {
             </p>
           </div>
           <div className="flex flex-col gap-2 w-full md:w-1/2 items-center md:p-4">
-            <h2 className="font-bold text-lg md:text-3xl text-center">
+            <h2 className="font-bold text-xl md:text-3xl ">
               Brain Healing & Optimization
             </h2>
-            <p className="p-4  md:text-2xl">
+            <p className="p-4 text-lg  md:text-2xl">
               Restrictions in and around the brain and spinal cord are released,
               resulting in increased nutrition to the brain, clearing of waste
               products, drainage, reduced inflammation, reduced scar tissue, and
@@ -93,10 +96,8 @@ function App() {
             </p>
           </div>
           <div className="flex flex-col gap-2 w-full md:w-1/2 items-center md:p-4">
-            <h2 className="font-bold text-lg md:text-3xl text-center">
-              Relaxation
-            </h2>
-            <p className="p-4 md:text-2xl">
+            <h2 className="font-bold text-xl md:text-3xl ">Relaxation</h2>
+            <p className="p-4 text-lg md:text-2xl">
               The parasympathetic nervous system is activated and balanced
               through treatment which has a calming effect. Disruption of the
               digestive system due to anxiety and stress can also be addressed
@@ -104,10 +105,10 @@ function App() {
             </p>
           </div>
           <div className="flex flex-col gap-2 w-full md:w-1/2 items-center md:p-4">
-            <h2 className="font-bold text-lg md:text-3xl text-center">
+            <h2 className="font-bold text-xl md:text-3xl ">
               Somato Emotional Release
             </h2>
-            <p className="p-4 md:text-2xl">
+            <p className="p-4 text-lg md:text-2xl">
               Interestingly, emotion can be stored in body tissue during injury
               or trauma. Somato Emotional Release (SER) allows for the release
               of tension patterns that are held because of an emotional
@@ -117,7 +118,7 @@ function App() {
           </div>
         </div>
 
-        <div className="relative w-full h-[160px] bg-purple">
+        <div className="relative w-full h-[40px] md:h-[160px] bg-purple">
           <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
             <svg
               data-name="Layer 1"
@@ -172,7 +173,7 @@ function App() {
           </div>
         </div>
 
-        <div className="relative w-full h-[160px] bg-purple">
+        <div className="relative w-full h-[40px] md:h-[160px] bg-purple">
           <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none rotate-180">
             <svg
               data-name="Layer 1"
@@ -243,13 +244,11 @@ function App() {
           className="flex flex-col justify-center items-center p-4 max-w-[100%]"
         >
           <h1 className=" text-2xl md:text-4xl p-4">Contact Me</h1>
-          <p className="text-center text-lg md:text-xl">
-            Call or text: 603-978-0500
-          </p>
-          <p className="text-center text-lg md:text-xl">
+          <p className=" text-lg md:text-xl">Call or text: 603-978-0500</p>
+          <p className=" text-lg md:text-xl">
             Please allow 24-48 hours response time
           </p>
-          <p className="text-center text-lg md:text-xl text-purple">
+          <p className=" text-lg md:text-xl text-purple">
             Text message is the fastest way to reach me
           </p>
           <img
@@ -297,7 +296,7 @@ function App() {
           {/* </div> */}
         </div>
 
-        <div className="relative w-full h-[160px] bg-purple">
+        <div className="relative w-full h-[40px] md:h-[160px] bg-purple">
           <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
             <svg
               data-name="Layer 1"
@@ -334,7 +333,7 @@ function App() {
             src="src/assets/profile_pic.jpg"
             alt="profile"
           />
-          <p className="md:text-2xl p-4">
+          <p className="text-lg md:text-2xl p-4">
             I've been a practicing Massage Therapist since 2009, treating
             clients with Deep Tissue and Swedish Massage for the first few
             years. However, I have transitioned to practicing Craniosacral
@@ -351,7 +350,7 @@ function App() {
             be happier to offer both relaxation and pain management through
             Craniosacral Therapy.{" "}
           </p>
-          <p className="md:text-2xl p-4">
+          <p className="text-lg md:text-2xl p-4">
             The human body is miraculous, and we're only beginning to understand
             it's capabilities. My approach is a combination of both eastern and
             western methods with a sound foundation in anatomy and science. If
@@ -360,11 +359,11 @@ function App() {
             restore and revitalize yourself.
           </p>
           <h1 className=" text-2xl md:text-4xl p-4">Qualifications</h1>
-          <p className="md:text-xl text-amber-100 text-center">
+          <p className=" text-lg md:text-xl text-amber-100 ">
             Licensed massage therapist: NH License #3279
           </p>
 
-          <ul className="flex flex-col items-center text-center md:text-xl max-w-4xl self-center list-disc p-6">
+          <ul className="flex flex-col items-center   text-lg md:text-xl max-w-4xl self-center list-disc p-6">
             <li className="list-inside">
               2008 Graduate of New Hampshire Institute for Therapeutic Arts
             </li>
@@ -407,14 +406,14 @@ function App() {
           </ul>
 
           <a
-            className="md:text-xl text-amber-100 underline text-center"
+            className=" text-lg md:text-xl text-amber-100 underline "
             href="https://www.upledger.com/therapies/index.php"
           >
             More information on Upledger Institute
           </a>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
