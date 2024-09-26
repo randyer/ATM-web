@@ -133,20 +133,20 @@ function App() {
               </li>
               <li>
                 <a
-                  href="#Reviews"
-                  className="block text-lg text-white p-2 hover:underline"
-                  onClick={toggleMenu}
-                >
-                  Reviews
-                </a>
-              </li>
-              <li>
-                <a
                   href="#Contact"
                   className="block text-lg text-white p-2 hover:underline"
                   onClick={toggleMenu}
                 >
                   Contact
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#Reviews"
+                  className="block text-lg text-white p-2 hover:underline"
+                  onClick={toggleMenu}
+                >
+                  Reviews
                 </a>
               </li>
               <li>
@@ -174,13 +174,13 @@ function App() {
             </a>
           </li>
           <li>
-            <a href="#Reviews" className="hover:underline">
-              Reviews
+            <a href="#Contact" className="hover:underline">
+              Contact
             </a>
           </li>
           <li>
-            <a href="#Contact" className="hover:underline">
-              Contact
+            <a href="#Reviews" className="hover:underline">
+              Reviews
             </a>
           </li>
           <li>
