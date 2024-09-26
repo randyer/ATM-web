@@ -426,11 +426,39 @@ function App() {
           <p className=" text-lg md:text-xl text-purple">
             Text message is the fastest way to reach me
           </p>
-          <img
-            className="rounded-xl w-72 max-w-[100%] m-8"
-            src="/flower-business.JPG"
-            alt="flower"
-          />
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={30}
+            loop={true}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+            modules={[Pagination, Navigation]}
+            className="mySwiper w-full max-w-5xl h-72 md:h-96 my-8"
+          >
+            <SwiperSlide className="flex justify-center items-center">
+              <img
+                className="w-56 md:w-96 md:rounded-2xl aspect-square object-cover rounded-xl"
+                src="/inside_entrance.jpg"
+                alt="Office entrance"
+              />
+            </SwiperSlide>
+            <SwiperSlide className="flex justify-center items-center">
+              <img
+                className="w-56 md:w-96 md:rounded-2xl aspect-square object-cover rounded-xl"
+                src="/outside.jpg"
+                alt="Outside entrance"
+              />
+            </SwiperSlide>
+            <SwiperSlide className="flex justify-center items-center">
+              <img
+                className="w-56 md:w-96 md:rounded-2xl aspect-square object-cover rounded-xl"
+                src="/inside_chart.jpg"
+                alt="Office with charts"
+              />
+            </SwiperSlide>
+          </Swiper>
           <p className="underline text-lg md:text-2xl p-4">
             AltonTherapeuticMassage@gmail.com
           </p>
@@ -450,23 +478,24 @@ function App() {
             Sunday: Closed
           </p>
           {/* <div className="flex w-1/4"> */}
-          <div className="flex flex-col md:flex-row justify-around items-center p-6">
+
+          {/* <div className="flex flex-col md:flex-row justify-around items-center p-6">
             <img
-              className=" mb-10 w-4/5 md:w-96 rounded-xl"
+              className=" mb-10 w-56 aspect-square object-cover rounded-xl m-6"
               src="/inside_entrance.jpg"
               alt="Office entrance"
             />
             <img
-              className=" mb-10 w-4/5 md:w-96 rounded-xl"
+              className=" mb-10 w-56 aspect-square object-cover rounded-xl m-6"
               src="/outside.jpg"
               alt="Outside entrance"
             />
             <img
-              className=" mb-10 w-4/5 md:w-96 rounded-xl"
+              className=" mb-10 w-56 aspect-square object-cover rounded-xl m-6"
               src="/inside_chart.jpg"
               alt="Office with charts"
             />
-          </div>
+          </div> */}
           {/* Reviews */}
           <h1
             id="Reviews"
@@ -484,7 +513,7 @@ function App() {
             }}
             navigation={true}
             modules={[Pagination, Navigation]}
-            className="mySwiper w-full max-w-5xl h-80"
+            className="mySwiper w-full max-w-5xl h-72 md:h-80"
           >
             <SwiperSlide className="flex justify-center items-center">
               <p className=" px-16 md:text-2xl text-amber-300 border-amber-300 rounded w-full break-words whitespace-normal max-w-2xl">
