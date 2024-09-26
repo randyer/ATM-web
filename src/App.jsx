@@ -2,6 +2,13 @@ import { useEffect, useRef, useState } from "react";
 import Carousel from "./components/Carousel";
 import "./App.css";
 import Lenis from "lenis";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper/modules";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 const lenis = new Lenis();
 
@@ -445,30 +452,75 @@ function App() {
           {/* <div className="flex w-1/4"> */}
           <div className="flex flex-col md:flex-row justify-around items-center p-6">
             <img
-              className=" mb-10 w-4/5 md:w-1/4 rounded-xl"
+              className=" mb-10 w-4/5 md:w-96 rounded-xl"
               src="/inside_entrance.jpg"
-              alt=""
+              alt="Office entrance"
             />
             <img
-              className=" mb-10 w-4/5 md:w-1/4 rounded-xl"
+              className=" mb-10 w-4/5 md:w-96 rounded-xl"
               src="/outside.jpg"
-              alt=""
+              alt="Outside entrance"
             />
             <img
-              className=" mb-10 w-4/5 md:w-1/4 rounded-xl"
+              className=" mb-10 w-4/5 md:w-96 rounded-xl"
               src="/inside_chart.jpg"
-              alt=""
+              alt="Office with charts"
             />
           </div>
           {/* Reviews */}
           <h1
             id="Reviews"
-            className="font-medium text-4xl self-center text-amber-300"
+            className="font-medium p-4 text-4xl self-center text-amber-300"
           >
             Reviews
           </h1>
 
-          <Carousel>
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={30}
+            loop={true}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+            modules={[Pagination, Navigation]}
+            className="mySwiper w-full max-w-5xl h-80"
+          >
+            <SwiperSlide className="flex justify-center items-center">
+              <p className=" px-16 md:text-2xl text-amber-300 border-amber-300 rounded w-full break-words whitespace-normal max-w-2xl">
+                "Craniosacral is amazing as is Pam! No one better! Do not
+                hesitate to make an appointment! Your body will thank you!
+                -Becky S."
+              </p>
+            </SwiperSlide>
+            <SwiperSlide className="flex justify-center items-center">
+              <p className="px-16 md:text-2xl text-amber-300 border-amber-300 rounded w-full break-words whitespace-normal max-w-2xl">
+                "Pam is a very detailed, understanding, and the most kind
+                therapist I've ever gone to. I would highly recommend her to
+                anyone. Her understanding and flexibility is a five-star. -Mary
+                T."
+              </p>
+            </SwiperSlide>
+            <SwiperSlide className="flex justify-center items-center">
+              <p className="px-16 md:text-2xl text-amber-300 border-amber-300 rounded w-full break-words whitespace-normal max-w-2xl">
+                "Pam is knowledgeable, thorough, present and most certainly
+                therapeutic. Instead of forcing the body to comply, her
+                understanding of the body, mind and spirit connection enables
+                her to use gentle touch to restore balance. -Vincent D."
+              </p>{" "}
+            </SwiperSlide>
+            <SwiperSlide className="flex justify-center items-center">
+              <p className="px-16 md:text-2xl text-amber-300 border-amber-300 rounded w-full break-words whitespace-normal max-w-2xl">
+                "Pam is AMAZING! After a very long time of struggling with hip,
+                back, and leg pain, Pam was able to relieve it all in just a few
+                visits. It was not what I expected at all. But it is exactly
+                what my body needed...and done with great care and compassion.
+                This is the place to go...no question!!! -Linda O."
+              </p>{" "}
+            </SwiperSlide>
+          </Swiper>
+
+          {/* <Carousel>
             <p className="p-10 md:text-2xl text-amber-300 border-amber-300 rounded w-full break-words whitespace-normal max-w-2xl">
               "Craniosacral is amazing as is Pam! No one better! Do not hesitate
               to make an appointment! Your body will thank you! -Becky S."
@@ -492,7 +544,7 @@ function App() {
               my body needed...and done with great care and compassion. This is
               the place to go...no question!!! -Linda O."
             </p>
-          </Carousel>
+          </Carousel> */}
 
           {/* </div> */}
         </div>

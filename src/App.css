@@ -1,3 +1,24 @@
 body {
   background-color: black;
 }
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  color: white;
+  font-size: 20px !important;
+}
+
+@media (min-width: 768px) {
+  .swiper-button-prev:after,
+  .swiper-button-next:after {
+    font-size: 44px !important;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background: white !important;
+}
+
+.swiper-pagination-bullet {
+  background: white !important;
+}
