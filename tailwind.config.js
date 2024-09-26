@@ -11,7 +11,7 @@ export default {
       },
     },
     backgroundImage: {
-      hero: "url('src/assets/orchid-black.jpg')",
+      hero: "url('/orchid-black.jpg')",
     },
   },
   plugins: [],

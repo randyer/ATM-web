@@ -158,8 +158,8 @@ function App() {
       </nav>
 
       {/* Header */}
-      <div className="relative flex justify-center items-center header w-screen h-screen text-white bg-hero bg-cover bg-center mb-10">
-        <div className="flex flex-col justify-center items-center absolute inset-0 bg-black bg-opacity-65 p-6">
+      <div className="relative flex justify-center items-center header w-screen h-screen text-white bg-hero bg-cover bg-center max-w-[100%] mb-10">
+        <div className="flex flex-col justify-center items-center absolute inset-0 bg-black bg-opacity-65">
           <h1 className=" italic text-4xl md:text-6xl md:p-4 ">
             Craniosacral Therapy
           </h1>
@@ -193,7 +193,7 @@ function App() {
           {/* Each flex-row will contain one header and one paragraph */}
           <div className="flex flex-col gap-2 w-full md:w-1/2 items-center md:p-4">
             <div className="flex items-center gap-2">
-              <img className="w-10" src="src/assets/person.png" alt="" />
+              <img className="w-10" src="/person.png" alt="" />
               <h2 className="font-bold text-xl md:text-3xl">
                 Soft Tissue Release
               </h2>
@@ -210,7 +210,7 @@ function App() {
 
           <div className="flex flex-col gap-2 w-full md:w-1/2 items-center md:p-4">
             <div className="flex items-center gap-2">
-              <img className="w-10" src="src/assets/happy.png" alt="" />
+              <img className="w-10" src="/happy.png" alt="" />
               <h2 className="font-bold text-xl md:text-3xl">
                 Brain Healing & Optimization
               </h2>
@@ -227,7 +227,7 @@ function App() {
 
           <div className="flex flex-col gap-2 w-full md:w-1/2 items-center md:p-4">
             <div className="flex items-center gap-2">
-              <img className="w-10" src="src/assets/calm.png" alt="" />
+              <img className="w-10" src="/calm.png" alt="" />
               <h2 className="font-bold text-xl md:text-3xl">Relaxation</h2>
             </div>
 
@@ -241,7 +241,7 @@ function App() {
 
           <div className="flex flex-col gap-2 w-full md:w-1/2 items-center md:p-4">
             <div className="flex items-center gap-2">
-              <img className="w-10" src="src/assets/heart.png" alt="" />
+              <img className="w-10" src="/heart.png" alt="" />
               <h2 className="font-bold text-xl md:text-3xl">
                 Somato Emotional Release
               </h2>
@@ -295,11 +295,7 @@ function App() {
           <div className="flex flex-col md:flex-row">
             {/* First Section with Image */}
             <div className="flex flex-col items-center">
-              <img
-                className=" w-10 md:w-20"
-                src="src/assets/levitation.png"
-                alt=""
-              />
+              <img className=" w-10 md:w-20" src="/levitation.png" alt="" />
               <p className="p-4 text-xl md:text-2xl">
                 Light pressure is primarily used, since the craniosacral rhythm
                 is very delicate. Tightness and tension patterns in the muscle
@@ -310,11 +306,7 @@ function App() {
 
             {/* Second Section with Image */}
             <div className="flex flex-col items-center">
-              <img
-                className=" w-10 md:w-20"
-                src="src/assets/t-shirt.png"
-                alt=""
-              />
+              <img className=" w-10 md:w-20" src="/t-shirt.png" alt="" />
               <p className="p-4 text-xl md:text-2xl">
                 You will remain fully clothed during treatment. With that in
                 mind, wear comfortable clothing Ex: t-shirt, stretchy pants,
@@ -324,11 +316,7 @@ function App() {
 
             {/* Third Section with Image */}
             <div className="flex flex-col items-center">
-              <img
-                className=" w-10 md:w-20"
-                src="src/assets/clean.png"
-                alt=""
-              />
+              <img className=" w-10 md:w-20" src="/clean.png" alt="" />
               <p className="p-4 text-xl md:text-2xl">
                 Sanitation precautions are taken for the health and wellbeing of
                 everyone involved. The office is equipped with a HEPPA filter
@@ -419,7 +407,7 @@ function App() {
           </p>
           <img
             className="rounded-xl w-72 max-w-[100%] m-8"
-            src="./public/flower-business.JPG"
+            src="/flower-business.JPG"
             alt="flower"
           />
           <p className="underline text-lg md:text-2xl p-4">
@@ -431,7 +419,7 @@ function App() {
           <h4 className="md:text-2xl text-amber-300 p-4">
             Hours: by appointment only
           </h4>
-          <p>
+          <p className="text-lg md:text-2xl p-4">
             Monday: 10am-7pm <br />
             Tuesday: 10am-7pm <br />
             Wednesday: 11am-7pm <br />
@@ -444,17 +432,17 @@ function App() {
           <div className="flex flex-col md:flex-row justify-around items-center p-6">
             <img
               className=" mb-10 w-4/5 md:w-1/4 rounded-xl"
-              src="src/assets/inside_entrance.jpg"
+              src="/inside_entrance.jpg"
               alt=""
             />
             <img
               className=" mb-10 w-4/5 md:w-1/4 rounded-xl"
-              src="src/assets/outside.jpg"
+              src="/outside.jpg"
               alt=""
             />
             <img
               className=" mb-10 w-4/5 md:w-1/4 rounded-xl"
-              src="src/assets/inside_chart.jpg"
+              src="/inside_chart.jpg"
               alt=""
             />
           </div>
@@ -496,7 +484,7 @@ function App() {
           <h1 className=" text-2xl md:text-4xl p-4">About Me</h1>
           <img
             className="w-44 rounded-full p-4"
-            src="src/assets/profile_pic.jpg"
+            src="/profile_pic.jpg"
             alt="profile"
           />
           <p className="text-lg md:text-2xl p-4">
