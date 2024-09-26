@@ -51,7 +51,8 @@ function App() {
   return (
     <div className="text-center">
       {/* Header */}
-      <div className="relative flex justify-center items-center header w-screen h-screen text-white bg-hero bg-cover bg-center max-w-[100%] mb-10 bg-fixed">
+      {/* bg-fixed */}
+      <div className="relative flex justify-center items-center header w-screen h-screen text-white bg-hero bg-cover bg-center max-w-[100%] mb-10 md:bg-fixed ">
         <div className="flex flex-col justify-center items-center absolute inset-0 bg-black bg-opacity-65">
           <h1 className="italic text-4xl md:text-6xl md:p-4">
             Craniosacral Therapy
