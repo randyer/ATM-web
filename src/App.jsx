@@ -440,15 +440,15 @@ function App() {
             <SwiperSlide className="flex justify-center items-center">
               <img
                 className="w-56 md:w-96 md:rounded-2xl aspect-square object-cover rounded-xl"
-                src="/inside_entrance.jpg"
-                alt="Office entrance"
+                src="/outside.jpg"
+                alt="Outside entrance"
               />
             </SwiperSlide>
             <SwiperSlide className="flex justify-center items-center">
               <img
                 className="w-56 md:w-96 md:rounded-2xl aspect-square object-cover rounded-xl"
-                src="/outside.jpg"
-                alt="Outside entrance"
+                src="/inside_entrance.jpg"
+                alt="Office entrance"
               />
             </SwiperSlide>
             <SwiperSlide className="flex justify-center items-center">
