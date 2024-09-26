@@ -1,6 +1,14 @@
 import { useEffect, useRef, useState } from "react";
+import Carousel from "./components/Carousel";
 import "./App.css";
 import Lenis from "lenis";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper/modules";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 const lenis = new Lenis();
 
@@ -125,20 +133,20 @@ function App() {
               </li>
               <li>
                 <a
-                  href="#Reviews"
-                  className="block text-lg text-white p-2 hover:underline"
-                  onClick={toggleMenu}
-                >
-                  Reviews
-                </a>
-              </li>
-              <li>
-                <a
                   href="#Contact"
                   className="block text-lg text-white p-2 hover:underline"
                   onClick={toggleMenu}
                 >
                   Contact
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#Reviews"
+                  className="block text-lg text-white p-2 hover:underline"
+                  onClick={toggleMenu}
+                >
+                  Reviews
                 </a>
               </li>
               <li>
@@ -166,13 +174,13 @@ function App() {
             </a>
           </li>
           <li>
-            <a href="#Reviews" className="hover:underline">
-              Reviews
+            <a href="#Contact" className="hover:underline">
+              Contact
             </a>
           </li>
           <li>
-            <a href="#Contact" className="hover:underline">
-              Contact
+            <a href="#Reviews" className="hover:underline">
+              Reviews
             </a>
           </li>
           <li>
@@ -303,7 +311,7 @@ function App() {
           id="Expectations"
           className="flex flex-col p-4 bg-purple text-black"
         >
-          <h1 className=" text-3xl md:text-4xl p-4 self-center">
+          <h1 className="font-medium text-3xl md:text-4xl p-4 self-center">
             What to Expect
           </h1>
           <div className="flex flex-col md:flex-row">
@@ -367,8 +375,7 @@ function App() {
           </div>
         </div>
 
-        {/* Reviews */}
-        <div id="Reviews" className="flex flex-col p-4">
+        {/* <div id="Reviews" className="flex flex-col p-4">
           <h1 className="text-4xl p-4 self-center text-amber-300">Reviews</h1>
           <div className="flex flex-wrap justify-center items-center mt-8">
             <div className="flex flex-col gap-2 w-full md:w-1/2 max-w-2xl justify-center items-center p-4">
@@ -404,14 +411,14 @@ function App() {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Contact */}
         <div
           id="Contact"
           className="flex flex-col justify-center items-center p-4 max-w-[100%]"
         >
-          <h1 className=" text-2xl md:text-4xl p-4">Contact Me</h1>
+          <h1 className="font-medium text-2xl md:text-4xl p-4">Contact Me</h1>
           <p className=" text-lg md:text-xl">Call or text: 603-978-0500</p>
           <p className=" text-lg md:text-xl">
             Please allow 24-48 hours response time
@@ -419,11 +426,39 @@ function App() {
           <p className=" text-lg md:text-xl text-purple">
             Text message is the fastest way to reach me
           </p>
-          <img
-            className="rounded-xl w-72 max-w-[100%] m-8"
-            src="/flower-business.JPG"
-            alt="flower"
-          />
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={30}
+            loop={true}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+            modules={[Pagination, Navigation]}
+            className="mySwiper w-full max-w-5xl h-72 md:h-96 my-8"
+          >
+            <SwiperSlide className="flex justify-center items-center">
+              <img
+                className="w-56 md:w-96 md:rounded-2xl aspect-square object-cover rounded-xl"
+                src="/outside.jpg"
+                alt="Outside entrance"
+              />
+            </SwiperSlide>
+            <SwiperSlide className="flex justify-center items-center">
+              <img
+                className="w-56 md:w-96 md:rounded-2xl aspect-square object-cover rounded-xl"
+                src="/inside_entrance.jpg"
+                alt="Office entrance"
+              />
+            </SwiperSlide>
+            <SwiperSlide className="flex justify-center items-center">
+              <img
+                className="w-56 md:w-96 md:rounded-2xl aspect-square object-cover rounded-xl"
+                src="/inside_chart.jpg"
+                alt="Office with charts"
+              />
+            </SwiperSlide>
+          </Swiper>
           <p className="underline text-lg md:text-2xl p-4">
             AltonTherapeuticMassage@gmail.com
           </p>
@@ -443,23 +478,102 @@ function App() {
             Sunday: Closed
           </p>
           {/* <div className="flex w-1/4"> */}
-          <div className="flex flex-col md:flex-row justify-around items-center p-6">
+
+          {/* <div className="flex flex-col md:flex-row justify-around items-center p-6">
             <img
-              className=" mb-10 w-4/5 md:w-1/4 rounded-xl"
+              className=" mb-10 w-56 aspect-square object-cover rounded-xl m-6"
               src="/inside_entrance.jpg"
-              alt=""
+              alt="Office entrance"
             />
             <img
-              className=" mb-10 w-4/5 md:w-1/4 rounded-xl"
+              className=" mb-10 w-56 aspect-square object-cover rounded-xl m-6"
               src="/outside.jpg"
-              alt=""
+              alt="Outside entrance"
             />
             <img
-              className=" mb-10 w-4/5 md:w-1/4 rounded-xl"
+              className=" mb-10 w-56 aspect-square object-cover rounded-xl m-6"
               src="/inside_chart.jpg"
-              alt=""
+              alt="Office with charts"
             />
-          </div>
+          </div> */}
+          {/* Reviews */}
+          <h1
+            id="Reviews"
+            className="font-medium p-4 text-4xl self-center text-amber-300"
+          >
+            Reviews
+          </h1>
+
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={30}
+            loop={true}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+            modules={[Pagination, Navigation]}
+            className="mySwiper w-full max-w-5xl h-72 md:h-80"
+          >
+            <SwiperSlide className="flex justify-center items-center">
+              <p className=" px-16 md:text-2xl text-amber-300 border-amber-300 rounded w-full break-words whitespace-normal max-w-2xl">
+                "Craniosacral is amazing as is Pam! No one better! Do not
+                hesitate to make an appointment! Your body will thank you!
+                -Becky S."
+              </p>
+            </SwiperSlide>
+            <SwiperSlide className="flex justify-center items-center">
+              <p className="px-16 md:text-2xl text-amber-300 border-amber-300 rounded w-full break-words whitespace-normal max-w-2xl">
+                "Pam is a very detailed, understanding, and the most kind
+                therapist I've ever gone to. I would highly recommend her to
+                anyone. Her understanding and flexibility is a five-star. -Mary
+                T."
+              </p>
+            </SwiperSlide>
+            <SwiperSlide className="flex justify-center items-center">
+              <p className="px-16 md:text-2xl text-amber-300 border-amber-300 rounded w-full break-words whitespace-normal max-w-2xl">
+                "Pam is knowledgeable, thorough, present and most certainly
+                therapeutic. Instead of forcing the body to comply, her
+                understanding of the body, mind and spirit connection enables
+                her to use gentle touch to restore balance. -Vincent D."
+              </p>{" "}
+            </SwiperSlide>
+            <SwiperSlide className="flex justify-center items-center">
+              <p className="px-16 md:text-2xl text-amber-300 border-amber-300 rounded w-full break-words whitespace-normal max-w-2xl">
+                "Pam is AMAZING! After a very long time of struggling with hip,
+                back, and leg pain, Pam was able to relieve it all in just a few
+                visits. It was not what I expected at all. But it is exactly
+                what my body needed...and done with great care and compassion.
+                This is the place to go...no question!!! -Linda O."
+              </p>{" "}
+            </SwiperSlide>
+          </Swiper>
+
+          {/* <Carousel>
+            <p className="p-10 md:text-2xl text-amber-300 border-amber-300 rounded w-full break-words whitespace-normal max-w-2xl">
+              "Craniosacral is amazing as is Pam! No one better! Do not hesitate
+              to make an appointment! Your body will thank you! -Becky S."
+            </p>
+            <p className="p-10 md:text-2xl text-amber-300 border-amber-300 rounded w-full break-words whitespace-normal max-w-2xl">
+              "Pam is a very detailed, understanding, and the most kind
+              therapist I've ever gone to. I would highly recommend her to
+              anyone. Her understanding and flexibility is a five-star. -Mary
+              T."
+            </p>
+            <p className="p-10 md:text-2xl text-amber-300 border-amber-300 rounded w-full break-words whitespace-normal max-w-2xl">
+              "Pam is knowledgeable, thorough, present and most certainly
+              therapeutic. Instead of forcing the body to comply, her
+              understanding of the body, mind and spirit connection enables her
+              to use gentle touch to restore balance. -Vincent D."
+            </p>
+            <p className="p-10 md:text-2xl text-amber-300 border-amber-300 rounded w-full break-words whitespace-normal max-w-2xl">
+              "Pam is AMAZING! After a very long time of struggling with hip,
+              back, and leg pain, Pam was able to relieve it all in just a few
+              visits. It was not what I expected at all. But it is exactly what
+              my body needed...and done with great care and compassion. This is
+              the place to go...no question!!! -Linda O."
+            </p>
+          </Carousel> */}
 
           {/* </div> */}
         </div>
@@ -495,7 +609,7 @@ function App() {
           id="About"
           className="flex flex-col justify-center items-center p-4 bg-purple text-black w-full"
         >
-          <h1 className=" text-2xl md:text-4xl p-4">About Me</h1>
+          <h1 className=" font-medium text-2xl md:text-4xl p-4">About Me</h1>
           <img
             className="w-44 md:w-56 rounded-full p-4"
             src="/profile_pic.jpg"
@@ -526,7 +640,9 @@ function App() {
             please don't hesitate to contact me to find out how I can help you
             restore and revitalize yourself.
           </p>
-          <h1 className=" text-2xl md:text-4xl p-4">Qualifications</h1>
+          <h1 className=" font-medium text-2xl md:text-4xl p-4">
+            Qualifications
+          </h1>
           <p className=" text-lg md:text-2xl text-amber-100 ">
             Licensed massage therapist: NH License #3279
           </p>
