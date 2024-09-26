@@ -1,14 +1,134 @@
 import "./App.css";
+import { useEffect, useRef, useState } from "react";
 
 function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isFadingOut, setIsFadingOut] = useState(false);
+  const menuRef = useRef(null);
+
+  // Toggle the mobile menu
+  const toggleMenu = () => {
+    if (isMenuOpen) {
+      setIsFadingOut(true);
+      setTimeout(() => {
+        setIsMenuOpen(false);
+        setIsFadingOut(false);
+      }, 300);
+    } else {
+      setIsMenuOpen(true);
+    }
+  };
+
+  // Close the menu if clicked outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        if (isMenuOpen) {
+          toggleMenu();
+        }
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isMenuOpen]);
   return (
     <div className="text-center">
       <nav className="absolute top-0 flex italic justify-between items-center w-full p-4 bg-purple z-50">
-        <h1 className=" text-lg md:text-xl text-white">
+        <h1 className="text-lg md:text-xl text-white">
           Alton Therapeutic Massage
         </h1>
 
-        <ul className=" text-xl justify-between items-center gap-x-4 text-white hidden md:flex">
+        {/* Hamburger button for small screens */}
+        <button
+          id="hamburger-button"
+          className="z-50 h-8 min-w-8 top-4 cursor-pointer text-3xl md:hidden"
+          onClick={toggleMenu}
+        >
+          {/* Hamburger button bars */}
+          <div className="relative flex flex-col items-end">
+            <div
+              className={`h-1 w-8 my-1 rounded bg-white transition-all duration-500 ${
+                isMenuOpen ? "origin-center -rotate-45 translate-y-3" : ""
+              }`}
+            ></div>
+            <div
+              className={`h-1 w-6 my-1 rounded bg-white transition-opacity duration-500 ${
+                isMenuOpen ? "opacity-0" : ""
+              }`}
+            ></div>
+            <div
+              className={`h-1 my-1 rounded bg-white transition-all duration-500 ${
+                isMenuOpen
+                  ? "origin-center rotate-45 -translate-y-3 w-8"
+                  : "w-4"
+              }`}
+            ></div>
+          </div>
+        </button>
+
+        {(isMenuOpen || isFadingOut) && (
+          <div
+            ref={menuRef}
+            className={`z-40 absolute top-20 right-0 p-2 mx-2 bg-purple bg-opacity-90  ${
+              isMenuOpen && !isFadingOut
+                ? "animate-fade-in duration-150"
+                : "animate-fade-out duration-150"
+            }`}
+          >
+            <ul className="grid gap-2">
+              <li>
+                <a
+                  href="#Treatments"
+                  className="block text-lg text-white p-2 hover:underline"
+                  onClick={toggleMenu}
+                >
+                  Treatments
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#Expectations"
+                  className="block text-lg text-white p-2 hover:underline"
+                  onClick={toggleMenu}
+                >
+                  Expectations
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#Reviews"
+                  className="block text-lg text-white p-2 hover:underline"
+                  onClick={toggleMenu}
+                >
+                  Reviews
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#Contact"
+                  className="block text-lg text-white p-2 hover:underline"
+                  onClick={toggleMenu}
+                >
+                  Contact
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#About"
+                  className="block text-lg text-white p-2 hover:underline"
+                  onClick={toggleMenu}
+                >
+                  About
+                </a>
+              </li>
+            </ul>
+          </div>
+        )}
+
+        <ul className="text-xl justify-between items-center gap-x-4 text-white hidden md:flex">
           <li>
             <a href="#Treatments" className="hover:underline">
               Treatments
@@ -69,13 +189,17 @@ function App() {
         </a>
 
         {/* Treatments */}
-        <div className=" relative flex flex-wrap mt-8 p-4">
+        <div className="relative flex flex-wrap mt-8 p-4">
           {/* Each flex-row will contain one header and one paragraph */}
           <div className="flex flex-col gap-2 w-full md:w-1/2 items-center md:p-4">
-            <h2 className="font-bold text-xl md:text-3xl ">
-              Soft Tissue Release
-            </h2>
-            <p className="p-4 text-lg md:text-2xl">
+            <div className="flex items-center gap-2">
+              <img className="w-10" src="src/assets/person.png" alt="" />
+              <h2 className="font-bold text-xl md:text-3xl">
+                Soft Tissue Release
+              </h2>
+            </div>
+
+            <p className="p-4 text-lg md:text-2xl max-w-2xl">
               Pain, tight muscles, or headaches are common complaints treated.
               Flexibility, spine movement, increased circulation, pain relief,
               and muscle relaxation are some effects of this treatment. A more
@@ -83,11 +207,16 @@ function App() {
               available.
             </p>
           </div>
+
           <div className="flex flex-col gap-2 w-full md:w-1/2 items-center md:p-4">
-            <h2 className="font-bold text-xl md:text-3xl ">
-              Brain Healing & Optimization
-            </h2>
-            <p className="p-4 text-lg  md:text-2xl">
+            <div className="flex items-center gap-2">
+              <img className="w-10" src="src/assets/happy.png" alt="" />
+              <h2 className="font-bold text-xl md:text-3xl">
+                Brain Healing & Optimization
+              </h2>
+            </div>
+
+            <p className="p-4 text-lg md:text-2xl max-w-2xl">
               Restrictions in and around the brain and spinal cord are released,
               resulting in increased nutrition to the brain, clearing of waste
               products, drainage, reduced inflammation, reduced scar tissue, and
@@ -95,20 +224,30 @@ function App() {
               concussions, TBIs, and most neurological dysfunction and diseases.
             </p>
           </div>
+
           <div className="flex flex-col gap-2 w-full md:w-1/2 items-center md:p-4">
-            <h2 className="font-bold text-xl md:text-3xl ">Relaxation</h2>
-            <p className="p-4 text-lg md:text-2xl">
+            <div className="flex items-center gap-2">
+              <img className="w-10" src="src/assets/calm.png" alt="" />
+              <h2 className="font-bold text-xl md:text-3xl">Relaxation</h2>
+            </div>
+
+            <p className="p-4 text-lg md:text-2xl max-w-2xl">
               The parasympathetic nervous system is activated and balanced
               through treatment which has a calming effect. Disruption of the
               digestive system due to anxiety and stress can also be addressed
               with this treatment achieving a more complete relaxation.
             </p>
           </div>
+
           <div className="flex flex-col gap-2 w-full md:w-1/2 items-center md:p-4">
-            <h2 className="font-bold text-xl md:text-3xl ">
-              Somato Emotional Release
-            </h2>
-            <p className="p-4 text-lg md:text-2xl">
+            <div className="flex items-center gap-2">
+              <img className="w-10" src="src/assets/heart.png" alt="" />
+              <h2 className="font-bold text-xl md:text-3xl">
+                Somato Emotional Release
+              </h2>
+            </div>
+
+            <p className="p-4 text-lg md:text-2xl max-w-2xl">
               Interestingly, emotion can be stored in body tissue during injury
               or trauma. Somato Emotional Release (SER) allows for the release
               of tension patterns that are held because of an emotional
@@ -154,22 +293,49 @@ function App() {
             What to Expect
           </h1>
           <div className="flex flex-col md:flex-row">
-            <p className="p-4 text-xl md:text-2xl">
-              Light pressure is primarily used, since the craniosacral rhythm is
-              very delicate. Tightness and tension patterns in the muscle and
-              fascia are found and treated. Energy work can also be used when
-              necessary.
-            </p>
-            <p className="p-4 text-xl md:text-2xl">
-              You will remain fully clothed during treatment. With that in mind,
-              wear comfortable clothing Ex: t-shirt, stretchy pants, sweatpants.
-            </p>
-            <p className="p-4 text-xl md:text-2xl">
-              Sanitation precautions are taken for the health and wellbeing of
-              everyone involved. The office is equipped with a HEPPA filter for
-              clean air. Surfaces are wiped clean before and after each
-              appointment.
-            </p>
+            {/* First Section with Image */}
+            <div className="flex flex-col items-center">
+              <img
+                className=" w-10 md:w-20"
+                src="src/assets/levitation.png"
+                alt=""
+              />
+              <p className="p-4 text-xl md:text-2xl">
+                Light pressure is primarily used, since the craniosacral rhythm
+                is very delicate. Tightness and tension patterns in the muscle
+                and fascia are found and treated. Energy work can also be used
+                when necessary.
+              </p>
+            </div>
+
+            {/* Second Section with Image */}
+            <div className="flex flex-col items-center">
+              <img
+                className=" w-10 md:w-20"
+                src="src/assets/t-shirt.png"
+                alt=""
+              />
+              <p className="p-4 text-xl md:text-2xl">
+                You will remain fully clothed during treatment. With that in
+                mind, wear comfortable clothing Ex: t-shirt, stretchy pants,
+                sweatpants.
+              </p>
+            </div>
+
+            {/* Third Section with Image */}
+            <div className="flex flex-col items-center">
+              <img
+                className=" w-10 md:w-20"
+                src="src/assets/clean.png"
+                alt=""
+              />
+              <p className="p-4 text-xl md:text-2xl">
+                Sanitation precautions are taken for the health and wellbeing of
+                everyone involved. The office is equipped with a HEPPA filter
+                for clean air. Surfaces are wiped clean before and after each
+                appointment.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -359,11 +525,11 @@ function App() {
             restore and revitalize yourself.
           </p>
           <h1 className=" text-2xl md:text-4xl p-4">Qualifications</h1>
-          <p className=" text-lg md:text-xl text-amber-100 ">
+          <p className=" text-lg md:text-2xl text-amber-100 ">
             Licensed massage therapist: NH License #3279
           </p>
 
-          <ul className="flex flex-col items-center   text-lg md:text-xl max-w-4xl self-center list-disc p-6">
+          <ul className="flex flex-col items-center   text-lg md:text-2xl max-w-4xl self-center list-disc p-6">
             <li className="list-inside">
               2008 Graduate of New Hampshire Institute for Therapeutic Arts
             </li>
@@ -406,7 +572,7 @@ function App() {
           </ul>
 
           <a
-            className=" text-lg md:text-xl text-amber-100 underline "
+            className=" text-lg md:text-2xl text-amber-100 underline "
             href="https://www.upledger.com/therapies/index.php"
           >
             More information on Upledger Institute
