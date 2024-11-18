@@ -204,12 +204,6 @@ function App() {
           <h3 className="md:p-2">90 minutes: $188.75</h3>
         </div>
 
-        <a href="https://craniosacralmassagetherapy.com/NewPatientForm.html">
-          <button className=" text-lg md:text-2xl px-8 py-2 m-6 bg-purple text-white rounded-3xl hover:bg-purple/65 focus:outline-none focus:ring-2 focus:ring-blue-300 transition duration-300 ease-in-out p-4">
-            Sign up
-          </button>
-        </a>
-
         {/* Treatments */}
         <div className="relative flex flex-wrap mt-8 p-4">
           {/* Each flex-row will contain one header and one paragraph */}
@@ -416,16 +410,26 @@ function App() {
         {/* Contact */}
         <div
           id="Contact"
-          className="flex flex-col justify-center items-center p-4 max-w-[100%]"
+          className="flex flex-col justify-center items-center p-2 max-w-[100%]"
         >
           <h1 className="font-medium text-2xl md:text-4xl p-4">Contact Me</h1>
-          <p className=" text-lg md:text-xl">Call or text: 603-978-0500</p>
-          <p className=" text-lg md:text-xl">
-            Please allow 24-48 hours response time
+
+          <p className=" text-lg md:text-2xl">
+            Phone: <span className="underline">603-978-0500</span>
           </p>
-          <p className=" text-lg md:text-xl text-purple">
-            Text message is the fastest way to reach me
+          <p className=" text-lg md:text-2xl pb-2">
+            Email:{" "}
+            <span className="underline">AltonTherapeuticMassage@gmail.com</span>
           </p>
+          <p className=" text-lg md:text-2xl text-purple">
+            Fill out the form below and we'll get back to you within 48 hours to
+            schedule an appointment
+          </p>
+          <a href="https://craniosacralmassagetherapy.com/NewPatientForm.html">
+            <button className=" text-lg md:text-2xl px-8 py-2 m-6 bg-purple text-white rounded-3xl hover:bg-purple/65 focus:outline-none focus:ring-2 focus:ring-blue-300 transition duration-300 ease-in-out p-4">
+              Sign up
+            </button>
+          </a>
           <Swiper
             slidesPerView={1}
             spaceBetween={30}
@@ -459,9 +463,7 @@ function App() {
               />
             </SwiperSlide>
           </Swiper>
-          <p className="underline text-lg md:text-2xl p-4">
-            AltonTherapeuticMassage@gmail.com
-          </p>
+
           <h3 className="md:text-2xl p-4">
             Located at 11B Village Cir, Alton, NH 03809
           </h3>
