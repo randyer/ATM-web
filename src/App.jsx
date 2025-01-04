@@ -199,9 +199,9 @@ function App() {
           Available Craniosacral Treatments
         </h2>
         <div className="flex flex-col md:flex-row md:gap-4 text-xl md:text-2xl text-purple justify-center">
-          <h3 className="md:p-2">30 minutes: $66.25</h3>
-          <h3 className="md:p-2">60 minutes: $127.50</h3>
-          <h3 className="md:p-2">90 minutes: $188.75</h3>
+          <h3 className="md:p-2">30 minutes: $68</h3>
+          <h3 className="md:p-2">60 minutes: $130</h3>
+          <h3 className="md:p-2">90 minutes: $195</h3>
         </div>
 
         {/* Treatments */}
