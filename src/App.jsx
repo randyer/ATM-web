@@ -659,6 +659,11 @@ function App() {
             <li className="list-inside">
               Upledeger Institute Medallion Member
             </li>
+            <img
+              class="w-44 md:w-56 rounded-3xl p-4"
+              src="/IAHP_Logo.jpg"
+              alt="profile"
+            ></img>
             <p className="text-amber-100">Completed Disciplines (CEU)</p>
             <li className="list-inside">
               Upledger Institute Craniosacral Therapy 1 (CST1)
