@@ -415,6 +415,9 @@ function App() {
           <h1 className="font-medium text-2xl md:text-4xl p-4">Contact Me</h1>
 
           <p className=" text-lg md:text-2xl">
+            <span className="">Pamela Bothwick</span>
+          </p>
+          <p className=" text-lg md:text-2xl">
             Phone: <span className="underline">603-978-0500</span>
           </p>
           <p className=" text-lg md:text-2xl pb-2">
@@ -618,21 +621,21 @@ function App() {
             alt="profile"
           />
           <p className="text-lg md:text-2xl p-4 max-w-6xl">
-            I've been a practicing Massage Therapist since 2009, treating
-            clients with Deep Tissue and Swedish Massage for the first few
-            years. However, I have transitioned to practicing Craniosacral
-            Therapy exclusively. The results are just as good, if not better,
-            with a much more gentle approach. I used to live by the saying, "no
-            pain, no gain" but I've found that isn't the case when it comes to
-            Craniosacral Therapy. Craniosacral Therapy through the Upledger
-            Institute has opened my eyes to amazing and effective alternatives
-            to the typical massage treatment. I offer my clients a fix for
-            muscle tension issues as well as relaxation and stress relief. In
-            addition to muscle and fascial tension release, I also specialize in
-            treating brain injury and neurological conditions. Common treatment
-            of conditions include concussions, migraines, and TBIs. I couldn't
-            be happier to offer both relaxation and pain management through
-            Craniosacral Therapy.{" "}
+            Hello, my name is Pamela Bothwick. I've been a practicing Massage
+            Therapist since 2009, treating clients with Deep Tissue and Swedish
+            Massage for the first few years. However, I have transitioned to
+            practicing Craniosacral Therapy exclusively. The results are just as
+            good, if not better, with a much more gentle approach. I used to
+            live by the saying, "no pain, no gain" but I've found that isn't the
+            case when it comes to Craniosacral Therapy. Craniosacral Therapy
+            through the Upledger Institute has opened my eyes to amazing and
+            effective alternatives to the typical massage treatment. I offer my
+            clients a fix for muscle tension issues as well as relaxation and
+            stress relief. In addition to muscle and fascial tension release, I
+            also specialize in treating brain injury and neurological
+            conditions. Common treatment of conditions include concussions,
+            migraines, and TBIs. I couldn't be happier to offer both relaxation
+            and pain management through Craniosacral Therapy.{" "}
           </p>
           <p className="text-lg md:text-2xl p-4 max-w-6xl">
             The human body is miraculous, and we're only beginning to understand
@@ -656,6 +659,11 @@ function App() {
             <li className="list-inside">
               Upledeger Institute Medallion Member
             </li>
+            <img
+              class="w-44 md:w-56 rounded-3xl p-4"
+              src="/IAHP_Logo.jpg"
+              alt="profile"
+            ></img>
             <p className="text-amber-100">Completed Disciplines (CEU)</p>
             <li className="list-inside">
               Upledger Institute Craniosacral Therapy 1 (CST1)
