@@ -428,6 +428,9 @@ function App() {
             Fill out the form below and we'll get back to you within 48 hours to
             schedule an appointment
           </p>
+          <p className=" text-lg md:text-2xl font-bold text-red">
+            Booked for Summer. Not accepting new clients at this time
+          </p>
           <a href="https://craniosacralmassagetherapy.com/NewPatientForm.html">
             <button className=" text-lg md:text-2xl px-8 py-2 m-6 bg-purple text-white rounded-3xl hover:bg-purple/65 focus:outline-none focus:ring-2 focus:ring-blue-300 transition duration-300 ease-in-out p-4">
               Sign up
