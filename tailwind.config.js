@@ -8,6 +8,7 @@ export default {
     extend: {
       colors: {
         purple: "#9d71b3",
+        red: "#ff0000",
       },
     },
     backgroundImage: {
