@@ -427,8 +427,8 @@ function App() {
           <p className=" text-lg md:text-2xl text-purple">
             Pamela is now specializing in head work. If you suffer from head
             pain, jaw pain, migraines, headaches, concussion, or traumatic brain
-            injury, please fill out the form below and we'll get back to you
-            within 48 hours to schedule an appointment.
+            injury, fill out the form below to be placed on the waitlist as we
+            are completely booked at this time.
           </p>
           {/* <p className=" text-lg md:text-2xl font-bold text-red">
             Booked for Summer. Not accepting new clients at this time
